@@ -1,0 +1,17 @@
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+exclude = '''
+(
+    /(
+        \.git
+      | \.venv
+      | venv
+      | env
+      | build
+      | dist
+      | data
+      | output
+    )/
+)
+'''
