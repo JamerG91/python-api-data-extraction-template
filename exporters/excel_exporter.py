@@ -8,7 +8,7 @@ class ExcelExporter(Exporter):
     def __init__(self, output_path: str):
         self.output_path = output_path
 
-    def export(self, data: list[dict], sheet_name: str = "data"):
+    def export_single(self, data: list[dict], sheet_name: str = "data"):
         if not data:
             return
 
@@ -21,7 +21,7 @@ class ExcelExporter(Exporter):
         self._write_sheet(ws, data)
         wb.save(self.output_path)
 
-    def export_multiple_sheets(self, sheets: dict[str, list[dict]]):
+    def export(self, sheets: dict[str, list[dict]]):
         """
         Export multiple datasets into a single Excel workbook, using one sheet
         per dataset.
