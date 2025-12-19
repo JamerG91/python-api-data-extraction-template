@@ -1,4 +1,5 @@
-# Configuration placeholders
+# Request Configuration
+USE_API = True
 BASE_URL = "https://api.open-meteo.com/v1/forecast"
 TIMEOUT = 10
 HEADERS = {
@@ -8,6 +9,15 @@ HEADERS = {
         "Chrome/143.0.0.0 Safari/537.36"
     )
 }
+
+# Input/Output Configuration
+INPUT_PATH = r"data\meteo.json"  # or "data\local_data.csv"
+
+OUTPUT_PATH = r"output\meteo_ouput.csv"  # or "output.csv"
+
+# use to export raw data without parsing
+SKIP_PARSING = False
+
 
 HOURLY_PARAMS = [
     "temperature_2m",
@@ -44,9 +54,3 @@ CITY_COORDINATES = {
     "Bangkok": (13.7563, 100.5018)
 }
 
-
-EXPORT_FORMAT = "excel"  # or "csv"
-OUTPUT_PATH = r"output\meteo.xlsx"  # or "output.csv"
-USE_LOCAL_INPUT = False
-INPUT_PATH = r"data\meteo.json"  # or "data\local_data.csv"
-SKIP_PARSING = False

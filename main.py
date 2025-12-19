@@ -1,13 +1,12 @@
 from client import fetch_data
 from config import (
+    USE_API,
     BASE_URL,
     HEADERS,
     PARAMS,
-    EXPORT_FORMAT,
     OUTPUT_PATH,
     INPUT_PATH,
     SKIP_PARSING,
-    USE_LOCAL_INPUT,
     CITY_COORDINATES,
 )
 from loaders.json_loader import JSONLoader
@@ -29,19 +28,20 @@ def get_loader(input_path):
     raise ValueError("Unsupported input format")
 
 
-def get_exporter(export_format, output_path):
-    if export_format == "json":
+def get_exporter(output_path):
+    if "json" in output_path:
         return JSONExporter(output_path)
-    if export_format == "csv":
-        return CSVExporter(output_path)
-    if export_format == "excel":
+    elif "csv" in output_path:
+       return CSVExporter(output_path)
+    elif "xlsx" in output_path or "xls" in output_path:
         return ExcelExporter(output_path)
-    raise ValueError("Unsupported export format")
+    else:
+        raise ValueError("Unsupported export format")
 
 
 def main():
 
-    if not USE_LOCAL_INPUT:
+    if USE_API:
         print("API data extraction template")
         all_raw_data = {}
         for city, (lat, lon) in CITY_COORDINATES.items():
@@ -69,9 +69,9 @@ def main():
     else:
         parsed_data = all_raw_data
 
-    exporter = get_exporter(EXPORT_FORMAT, OUTPUT_PATH)
-    exporter.export_multiple_sheets(parsed_data)
-    print(f"Data exported to {OUTPUT_PATH} in {EXPORT_FORMAT} format.")
+    exporter = get_exporter(OUTPUT_PATH)
+    exporter.export(parsed_data)
+    print(f"Data exported to {OUTPUT_PATH} in {OUTPUT_PATH.split('.')[-1]} format.")
 
 
 if __name__ == "__main__":
