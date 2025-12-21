@@ -15,7 +15,7 @@ from loaders.excel_loader import ExcelLoader
 from exporters.json_exporter import JSONExporter
 from exporters.csv_exporter import CSVExporter
 from exporters.excel_exporter import ExcelExporter
-from parsers.weather_hourly_parser import WeatherHourlyParser
+from parsers.parser import WeatherHourlyParser
 
 
 def get_loader(input_path):
