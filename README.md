@@ -67,7 +67,7 @@ parsed_data = {
 }
 
 An excel output will have the high level keys as sheets. 
-A .csv will simply append 
+A .csv will create a different .csv for each sheet.
 
 ## Disclaimer
 This repository is for educational and demonstration purposes only.
