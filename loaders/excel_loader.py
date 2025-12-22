@@ -1,4 +1,3 @@
-# loaders/excel_loader.py
 from openpyxl import load_workbook
 from .base import Loader
 

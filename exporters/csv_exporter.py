@@ -1,4 +1,3 @@
-# exporters/csv_exporter.py
 import csv
 from .base import Exporter
 from pathlib import Path

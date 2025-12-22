@@ -1,4 +1,3 @@
-# loaders/json_loader.py
 import json
 from .base import Loader
 

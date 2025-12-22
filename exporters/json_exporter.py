@@ -1,4 +1,3 @@
-# exporters/json_exporter.py
 import json
 from .base import Exporter
 
