@@ -46,6 +46,11 @@ a key for each call you make. All data are expected to be
 json and are saved in all_raw_data which is a dict of list of dicts
 all_raw_data: dict[list[dict]]
 
+## Cache
+Data added in *cache* and written every 30 requests.
+By setting USE_CACHE as True in the config, you can
+use already cached data. Cache must be deleted manually.
+
 ## Parser will depend on the data received
 
 ## Output
