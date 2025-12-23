@@ -22,9 +22,7 @@ class CSVExporter(Exporter):
         elif isinstance(data, dict):
             self._export_multiple(data)
         else:
-            raise TypeError(
-                "CSVExporter expects a list[dict] or dict[str, list[dict]]"
-            )
+            raise TypeError("CSVExporter expects a list[dict] or dict[str, list[dict]]")
 
     def _export_single(self, path: Path, rows: list[dict]):
         if not rows:

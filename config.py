@@ -13,10 +13,13 @@ HEADERS = {
 # Input/Output Configuration
 INPUT_PATH = r"data\meteo.json"  # or "data\local_data.csv"
 
-OUTPUT_PATH = r"output\meteo_ouput.csv"  # or "output.csv"
+OUTPUT_PATH = r"output\meteo_output.xlsx"  # or "output.csv"
 
 # use to export raw data without parsing
 SKIP_PARSING = False
+
+# use cache to avoid redundant API calls
+USE_CACHE = True
 
 
 HOURLY_PARAMS = [
@@ -51,6 +54,5 @@ CITY_COORDINATES = {
     "Berlin": (52.5200, 13.4050),
     "Madrid": (40.4168, -3.7038),
     "Rome": (41.9028, 12.4964),
-    "Bangkok": (13.7563, 100.5018)
+    "Bangkok": (13.7563, 100.5018),
 }
-

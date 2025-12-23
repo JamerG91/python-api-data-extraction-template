@@ -3,6 +3,7 @@ import pytest
 
 from exporters.excel_exporter import ExcelExporter
 
+
 def test_excel_exporter_creates_multiple_sheets(tmp_path):
     output_file = tmp_path / "output.xlsx"
 
@@ -30,4 +31,3 @@ def test_excel_exporter_rejects_invalid_input(tmp_path):
 
     with pytest.raises(TypeError):
         exporter.export(["not", "a", "dict"])
-

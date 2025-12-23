@@ -1,4 +1,3 @@
-# exporters/excel_exporter.py
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
 from .base import Exporter
