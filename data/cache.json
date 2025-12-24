@@ -1,0 +1,24 @@
+{
+  "completed": {
+    "TestCity": {
+      "hourly": {
+        "time": [
+          0
+        ],
+        "temperature_2m": [
+          20.0
+        ]
+      },
+      "hourly_units": {
+        "time": "unixtime",
+        "temperature_2m": "°C"
+      }
+    }
+  },
+  "failed": {},
+  "meta": {
+    "requests_made": 1,
+    "started_at": "2025-12-24T13:45:00.513998Z",
+    "api_url": "https://api.open-meteo.com/v1/forecast"
+  }
+}
