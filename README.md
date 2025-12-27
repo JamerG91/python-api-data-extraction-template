@@ -4,7 +4,7 @@ This repository contains a **generic Python template** for API-based data extrac
 
 It is intended as a reusable starting point for:
 - collecting data from public or authorized APIs
-- handling pagination and retries
+- handling retries
 - exporting structured data to CSV or Excel
 
 
