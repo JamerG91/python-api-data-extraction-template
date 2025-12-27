@@ -10,9 +10,9 @@ It is intended as a reusable starting point for:
 
 ## Features
 - Requests-based API client
-- Pagination handling
 - Basic error handling
 - CSV / Excel export
+- Progress-safe caching (resume without re-downloading)
 
 
 ## Configuration
